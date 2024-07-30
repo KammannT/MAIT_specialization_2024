@@ -10,7 +10,7 @@ for(package in required_packages){
 script_dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
 setwd(script_dir)
 
-olink_data <- read_csv(file='../Data/Fig4_Olink_data.csv')
+olink_data <- read_csv(file='./Olink_Secretome_data_Fig4.csv')
 
 # Remove IFNg in IL-12+IL-18 stimulated assays because of hook effect observed in pilot run with dilution serious of supernatant
 olink_data     <- olink_data %>% filter(!(Assay=='IFNg' & Stimulation=='IL-12 + IL-18'))
