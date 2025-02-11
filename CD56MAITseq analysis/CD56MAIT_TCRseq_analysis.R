@@ -55,7 +55,7 @@ TCR <- addVariable(TCR, name='donor', variables=c('D1', 'D2', 'D3', 'D4'))
 # Data deposition
 TCR_file <- do.call(rbind.data.frame, TCR)
 TCR_file <- TCR_file %>% dplyr::select(-sample) %>% rename(CellBarcode=barcode, Donor=donor, TCRa=TCR1, TCRb=TCR2)
-saveRDS(TCR_file, file='./Data deposition/TCR_Kammann_et_al.rds')
+saveRDS(TCR_file, file='./Data deposition/TCR_MAIT_Kammann_et_al.rds')
 
 # MAIT cell TCR clonotype annotation ----------------------------------------
 
